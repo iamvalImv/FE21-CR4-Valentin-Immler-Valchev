@@ -39,25 +39,33 @@ function generateMainHTML() {
   return data
 }
 
-//call on load document
+//Call on load document
 setMainHtml();
+// Storing the ratings from the Database into a variable ratings
+// var ratings = JSON.parse(movieDatabase);
+//Call on load, method that returns the element that has the ID attribute (data from the HTML) attribute with the specified value. 
+function setMainHtml(){
+  document.getElementById("data").innerHTML = generateMainHTML();
+}
 
-//click event for sort-button
+//Sorting the objects with the function -descending value /from highest to lowest/
+// the sortMovies method
 function sortMovies(){
   obj.Movies.sort(function(a, b) {return b.rating - a.rating});
   setMainHtml();
 }
+//Sorting the objects with the method -ascending value /from lowest to highest/
+// function sortMovies(){
+//   obj.Movies.sort(function(a, b) {return a.rating - b.rating});
+//   setMainHtml();
+// }
 
-// Get ratings function declaration
+// Get ratings method declaration
 function doLike(pRatingId) {
   let oldRating = parseInt(pRatingId.innerHTML);
   let newRating = oldRating + 1;
   pRatingId.innerHTML = '' + newRating;
 }
-
-function setMainHtml(){
-  document.getElementById("data").innerHTML = generateMainHTML();
-}
-
-var ratings = JSON.parse(movieDatabase);
+// 
+// var ratings = JSON.parse(movieDatabase);
 // document.addEventListener('DOMcontentloaded', getRatings);
