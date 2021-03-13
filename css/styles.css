@@ -1,3 +1,4 @@
+/* Thumbs up Button style */
 .fa {
     font-size: 30px;
     cursor: pointer;
@@ -5,5 +6,12 @@
   }
   
   .fa:hover {
-    color: chartreuse;
+    color: #3b5998;
   }
+/* Used toogle button from w3schools */
+  /* https://www.w3schools.com/howto/howto_js_toggle_like.asp */
+
+/* Footer */
+.card-body{
+  
+}

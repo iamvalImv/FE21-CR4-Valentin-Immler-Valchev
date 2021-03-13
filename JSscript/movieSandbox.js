@@ -4,87 +4,60 @@ var obj = JSON.parse(movieDatabase);
 // console-logging all 8 movie arays
 // console.log(obj);
 
-// Declaring a function 
+// Declaring the generate HTML function with the for-in loop inside to loop through the JSON file
 function generateMainHTML() {
   let data = "";
- 
-  // movieDatabase.sort(function(a,b) {
-  //   return a.movieDatabase.rating > b.movieDatabase.rating;
-  // });
 
   //create html
   for (i in obj.Movies) {
+    let singleMovie = obj.Movies[i];
     data += `
-    <div class="card bg-dark mb-3" style="max-width: 540px;">
-  <div class="row g-0">
-    <div class="col-md-4">
-      <img class = "img-fluid" src="${obj.Movies[i].image}" alt="error loading image file">
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h2 class="card-title">${obj.Movies[i].title}</h2>
-        <p class="card-text">${obj.Movies[i].description}</p>
-        <Directed class="fw-bolder">Directed by: ${obj.Movies[i].director}</p> 
-        <p class="card-text"><small class="text-muted">${obj.Movies[i].category}</small></p>
-        <p class="card-text"><small class="text-muted">${obj.Movies[i].year}</small></p>
-        <p class="card-text"><small class="text-muted">${obj.Movies[i].runtime}</small></p> 
-
-        <div class="row">
-        <div class="col-md-6"><i onclick="doLike(pId${i})" class="fa fa-thumbs-up"></i></div>
-        <div class="col-md-6"><p class="card-text"><small id="pId${i}" class="text-muted">${obj.Movies[i].rating}</small></p>
-</div>
-    </div>
-
-            
+  <div class="col-md-8 col-lg-6">
+    <div class="card-body">
+      <div class="col">
+        <div class="card">
+          <img class="w-50 img-fluid" src="${singleMovie.image}" alt="error loading image file"></img>
+            <div class="card-body">
+              <h5 class="card-title">${singleMovie.title}</h5>
+              <p class="card-text">${singleMovie.description}</p>
+              <Directed class="fw-bolder">Directed by: ${singleMovie.director}</p> 
+              <p class="card-text"><small class="text-muted">${singleMovie.category}</small></p>
+              <p class="card-text"><small class="text-muted">${singleMovie.year}</small></p>
+              <p class="card-text"><small class="text-muted">${singleMovie.runtime}</small></p> 
+              <!-- Rating section-->
+              <!--Thumbs up button -->
+              <div class="col-md-6"><i onclick="doLike(pRatingId${i})" class="fa fa-thumbs-up"></i></div>
+              <!-- Creating an id variable and assigning it the paragraph id value and the object rating in the Movie data base -->
+             <span class="col-md-3 ms-6"><p class="card-text"><small id="pRatingId${i}" class="text-muted">${singleMovie.rating}</small></p>
+             </span>
+            </div>
+         </div>
       </div>
-  </div>
-</div>
-    `}
+    </div>
+   </div> 
+        `}
   return data
 }
 
-function doLike(pId) {
-  let oldRating = parseInt(pId.innerHTML);
+//call on load document
+setMainHtml();
+
+//click event for sort-button
+function sortMovies(){
+  obj.Movies.sort(function(a, b) {return b.rating - a.rating});
+  setMainHtml();
+}
+
+// Get ratings function declaration
+function doLike(pRatingId) {
+  let oldRating = parseInt(pRatingId.innerHTML);
   let newRating = oldRating + 1;
-  pId.innerHTML = '' + newRating;
+  pRatingId.innerHTML = '' + newRating;
 }
 
-document.getElementById("data").innerHTML += generateMainHTML();
+function setMainHtml(){
+  document.getElementById("data").innerHTML = generateMainHTML();
+}
 
-// =============================================================/
-// Adding an eventlistener to the page and calling the get ratings function
 var ratings = JSON.parse(movieDatabase);
-document.addEventListener('DOMcontentloaded', getRatings);
-
-
-// Get ratings
-function getRatings() {
-  for (let rating in ratings) {
-    console.log(rating);
-  }
-}
-
-
-// // Star Rating Movies 1st Attempt
-// var HTML = ""; // Start the HTML string for concatenation
-// data.forEach(function( ob) {
-//   for(var i=0; i<5; i++) {  // We need 5 stars
-//     var icoClass = i<ob.star ? "fa fa-star" : "fa fa-star-o"; // full or empty star?
-//     HTML += "<i class='"+ icoClass +"'></i>"; // concatenate stars
-//   }
-//   HTML += " "+ ob.name +"<br>"; // and concatenate the cool movie name
-// });
-// document.getElementById("id").innerHTML = HTML; // Finally insert
-
-// ${obj.Movies[i].image}
-
-
-// ${obj.Movies[i].title}
-
-
-
-// document.getElementById("data").innerHTML = "Title: " + obj.title + " " + obj.runtime + "" + "br";
-
-
-
-
+// document.addEventListener('DOMcontentloaded', getRatings);
