@@ -8,7 +8,9 @@ let movieDatabase = `{
         "runtime": "2h 10min",
         "category": "Drama",
         "director": "Paul Thomas Anderson",
-        "description": "Set in 1950s London, Reynolds Woodcock is a renowned dressmaker whose fastidious life is disrupted by a young, strong-willed woman, Alma, who becomes his muse and lover."
+        "description": "Set in 1950s London, Reynolds Woodcock is a renowned dressmaker whose fastidious life is disrupted by a young, strong-willed woman, Alma, who becomes his muse and lover.",
+        "rating": 5
+        
     },{
         "title" : "Before Night Falls",
         "image" : "../pic/Before_Night_Falls.jpg",
@@ -16,8 +18,8 @@ let movieDatabase = `{
         "runtime": "2h 13min",
         "category": "Biography",
         "director": "Julian Schnabel",
-        "description": "The life of Cuban poet and novelist, Reinaldo Arenas."
-
+        "description": "The life of Cuban poet and novelist, Reinaldo Arenas.",
+        "rating": 3
     },{
         "title" : "Sherpa",
         "image" : "../pic/sherpa.jpg",
@@ -25,7 +27,8 @@ let movieDatabase = `{
         "runtime": "1h 36min",
         "category": "Documentary",
         "director": "Jenniffer Peedom",
-        "description":"A fight on Everest? It seemed incredible. But in 2013 news channels around the world reported an ugly brawl at 6400 m (21,000 ft) as European climbers fled a mob of angry Sherpas. In 1953, New Zealander Edmund Hillary and Sherpa Tenzing Norgay had reached the summit in a spirit of co-operation and brave optimism."
+        "description":"A fight on Everest? It seemed incredible. But in 2013 news channels around the world reported an ugly brawl at 6400 m (21,000 ft) as European climbers fled a mob of angry Sherpas. In 1953, New Zealander Edmund Hillary and Sherpa Tenzing Norgay had reached the summit in a spirit of co-operation and brave optimism.",
+        "rating": 9
 
     },{ "title" : "Art of flight",
         "image" : "../pic/artOfFlight.jpg",
@@ -33,8 +36,8 @@ let movieDatabase = `{
         "runtime": "1h 36min",
         "category": "Sport",
         "director": "Travis Rice",
-        "description":"The fun crew of Travis Rice, Mark Landvick, DCP and Curt Morgan set off to Canada with high expectations for what is to be the first shoot of The Art of Flight Movie. After stress at the border, the team arrives in Canada only to find bad weather, high avalanche danger and risky helicopter situations."
-
+        "description":"The fun crew of Travis Rice, Mark Landvick, DCP and Curt Morgan set off to Canada with high expectations for what is to be the first shoot of The Art of Flight Movie. After stress at the border, the team arrives in Canada only to find bad weather, high avalanche danger and risky helicopter situations.",
+        "rating": 15
     }, {
         "title" : "Bandwagon",
         "image" : "../pic/bandwagon.jpg",
@@ -42,7 +45,8 @@ let movieDatabase = `{
         "runtime": "1h 42min",
         "category": "Comedy",
         "director": "John Schultz",
-        "description":"Four young men hardly know each other, but here they are in the most volatile and tenuous of unions: a band. They find themselves hurtling through an exhilarating adventure on a collision course with self discovery, or self destruction."
+        "description":"Four young men hardly know each other, but here they are in the most volatile and tenuous of unions: a band. They find themselves hurtling through an exhilarating adventure on a collision course with self discovery, or self destruction.",
+        "rating": 5
 
     }, {
         "title" : "Still KD",
@@ -51,7 +55,8 @@ let movieDatabase = `{
         "runtime": "35 min",
         "category": "Documentary",
         "director": "Brandon Loper",
-        "description":"Story of Kevin Durant joining the Golden State Warriors."
+        "description":"Story of Kevin Durant joining the Golden State Warriors.",
+        "rating": 5
 
     },{
         "title" : "There Will be Blood",
@@ -60,7 +65,8 @@ let movieDatabase = `{
         "runtime": "2h 38 min",
         "category": "Drama",
         "director": "Paul Thomas Anderson",
-        "description":"The intersecting life stories of Daniel Plainview and Eli Sunday in early twentieth century California is presented. Miner turn oilman Daniel Plainview is a driven man who will do whatever it takes to achieve his goals."
+        "description":"The intersecting life stories of Daniel Plainview and Eli Sunday in early twentieth century California is presented. Miner turn oilman Daniel Plainview is a driven man who will do whatever it takes to achieve his goals.",
+        "rating": 5
     },{
         "title" : "Into The Wild",
         "image" : "../pic/intoTheWild.jpg",
@@ -68,7 +74,9 @@ let movieDatabase = `{
         "runtime": "2h 28 min",
         "category": "Adventure",
         "director": "Sean Penn",
-        "description":"After graduating from Emory University, top student and athlete Christopher McCandless abandons his possessions, gives his entire $24,000 savings account to charity and hitchhikes to Alaska to live in the wilderness. Along the way, Christopher encounters a series of characters that shape his life."
+        "description":"After graduating from Emory University, top student and athlete Christopher McCandless abandons his possessions, gives his entire $24,000 savings account to charity and hitchhikes to Alaska to live in the wilderness. Along the way, Christopher encounters a series of characters that shape his life.",
+        "rating": 5
+
     }
 
 ]
